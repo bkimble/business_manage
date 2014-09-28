@@ -1,9 +1,9 @@
-Q. What if additional types of users were introduced into the product?  What if additional layers of permissions were required?  
-A. I would use Devise and CanCan to deal with login users and login user roles.
+    Q. What if additional types of users were introduced into the product?  What if additional layers of permissions were required?  
+    A. I would use Devise and CanCan to deal with login users and login user roles.
 
-Q. What sorts of validations would you want?
-A. Email and phone number format validation, of course!
+    Q. What sorts of validations would you want?
+    A. Email and phone number format validation, of course!
 
-Other notes: I wrote this all from scratch. If I were doing this for real, I wouldv'e used a combination of Devise, CanCan, and ActiveAdmin to make a decent looking admin, with authorization, and user roles. I would have also written tests (I stubbed out the things I would test for but did not fill them in as I ran out of time)
+    Other notes: I wrote this all from scratch. If I were doing this for real, I wouldv'e used a combination of Devise, CanCan, and ActiveAdmin to make a decent looking admin, with authorization, and user roles. I would have also written tests (I stubbed out the things I would test for but did not fill them in as I ran out of time)
 
 
