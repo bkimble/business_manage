@@ -1,0 +1,8 @@
+<% if flash[:error] %>
+<%= flash[:error ]%>
+<% end %>
+
+<%= form_for(@user, :url => login_path(@user)) do |f| %>
+<%= f.text_field(:email) %>
+<%= f.submit("Login") %>
+<% end %>
