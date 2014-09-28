@@ -15,10 +15,8 @@ class UsersController < ApplicationController
       ids << @authorized_user.subordinate_ids
     else
       ids << @authorized_user.manager_id
-    end
-    
-    @users = User.where(id: ids).all
-    
+    end    
+    @users = User.where(id: ids).all    
   end  
   
   def edit
@@ -77,7 +75,6 @@ class UsersController < ApplicationController
     end
   end
 
-  
   def authorize
     if session[:user_id]
       @authorized_user = User.find(session[:user_id])
