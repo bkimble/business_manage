@@ -1,3 +1,18 @@
 users!
 
 <%= @authorized_user.manager? %>
+
+<table>
+<tr>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Phone</td>
+</tr>
+<% @users.each do |user| %>
+<tr>
+    <td><%= link_to(user.name, user_url(user))   %></td>
+    <td><%= user.email %></td>
+    <td><%= user.phone %></td>
+</tr>
+<% end %>
+</table>

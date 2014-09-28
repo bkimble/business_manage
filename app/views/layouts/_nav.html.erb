@@ -1,0 +1,4 @@
+<div>
+  <span>Welcome to the admin editor, <%= @authorized_user.name %></span>
+  <span><%= link_to('Logout', login_path(@authorized_user), 'data-method' => 'delete') %></span>  
+</div>

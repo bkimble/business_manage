@@ -1,0 +1,8 @@
+<div>Name: <%= @user.name %></div>
+<div>Phone: <%= @user.phone %></div>
+<div>Email: <%= @user.email %></div>
+
+<% if @authorized_user.manager? || @authorized_user == @user  %>
+<%= link_to("Edit this user", edit_user_url(@user)) %></div>
+
+<% end%>
