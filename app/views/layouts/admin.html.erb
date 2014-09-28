@@ -10,6 +10,14 @@
   
 <%= render 'layouts/nav'%>
 
+<div class="nav">
+<span><%= link_to("Home", users_url)%></span>
+<% if @authorized_user.can?(:create_users) %>
+<span><%= link_to("Create User", new_user_url)%></span>
+<% end %>
+
+</div>
+
 <%= yield %>
 
 </body>

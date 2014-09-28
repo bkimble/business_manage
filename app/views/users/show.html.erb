@@ -2,7 +2,5 @@
 <div>Phone: <%= @user.phone %></div>
 <div>Email: <%= @user.email %></div>
 
-<% if @authorized_user.manager? || @authorized_user == @user  %>
-<%= link_to("Edit this user", edit_user_url(@user)) %></div>
-
-<% end%>
+<span><%= link_to("Edit", edit_user_url(@user)) if @authorized_user.can?(:edit_user, @user) %></span>
+<span><%= link_to("Delete", user_url(@user), 'data-method' => 'delete') if @authorized_user.can?(:delete_user, @user) %></span>

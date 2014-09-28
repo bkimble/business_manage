@@ -1,6 +1,6 @@
-users!
-
-<%= @authorized_user.manager? %>
+<% if flash[:error] %>
+  <%= flash[:error ]%>
+<% end %>
 
 <table>
 <tr>

@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140928204245) do
     t.string   "name"
     t.string   "email"
     t.string   "phone"
+    t.boolean  "is_manager", default: false
     t.integer  "manager_id"
     t.datetime "created_at"
     t.datetime "updated_at"
