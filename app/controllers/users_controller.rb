@@ -10,7 +10,15 @@ class UsersController < ApplicationController
 
 
   def index
-    @users = User.all
+    ids = [@authorized_user.id]
+    if @authorized_user.manager?
+      ids << @authorized_user.subordinate_ids
+    else
+      ids << @authorized_user.manager_id
+    end
+    
+    @users = User.where(id: ids).all
+    
   end  
   
   def edit
